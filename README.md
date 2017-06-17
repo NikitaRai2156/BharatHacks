@@ -2,8 +2,6 @@
 
 Created using Django.
 
-
-
 ### Setup
 
 Make sure that you have mysql (5.6) installed on your system.

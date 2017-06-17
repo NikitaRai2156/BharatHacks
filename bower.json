@@ -14,6 +14,7 @@
     "bharathacks/static/bower_components"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "materialize": "^0.98.2"
   }
 }
