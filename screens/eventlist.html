@@ -24,6 +24,8 @@
       <nav class="navBlue">
         <div class="nav-wrapper">
           <a href="#" class="brand-logo center thin">Home-Makers</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
           <ul id="nav-mobile" class="right hide-on-med-and-down" style="display:flex;flex-wrap:wrap">
             <li class=""><a href="#">Username</a></li>
 
@@ -31,26 +33,45 @@
         </div>
       </nav>
     </div>
+    <ul id="nav-mobile" class="side-nav">
+      <ul id="slide-out" class="side-nav fixed hide-on-med-and-down" style="transform: translateX(0%);margin-top:64px;">
+        <li>
+          <div class="userView">
+            <a href="#!user"><img class="circle" src="http://lorempixel.com/g/200/200/"></a>
+            <a href="#!name"><span>John Doe</span></a>
+            <a href="#"><span class="email">johndoe@johndoe.com</span></a>
+          </div>
+        </li>
+        <li><a class="waves-effect" href="#">Home</a></li>
+        <div class="divider"></div>
+        <li><a class="waves-effect" href="#">About</a></li>
+        <div class="divider"></div>
+        <li>
+          <a class="waves-effect" href="#">My Code</a>
+        </li>
+        <div class="divider"></div>
+      </ul>
 
+<ul id="mobile-demo" class="side-nav">
+  <li>
+    <div class="userView">
+      <a href="#!user"><img class="circle" src="http://lorempixel.com/g/200/200/"></a>
+      <a href="#!name"><span>John Doe</span></a>
+      <a href="#"><span class="email">johndoe@johndoe.com</span></a>
+    </div>
+  </li>
+  <li><a class="waves-effect" href="#">Home</a></li>
+  <div class="divider"></div>
+  <li><a class="waves-effect" href="#">About</a></li>
+  <div class="divider"></div>
+  <li>
+    <a class="waves-effect" href="#">My Code</a>
+  </li>
+  <div class="divider"></div>
+</ul>
   </header>
   <main class="row">
-    <ul id="slide-out" class="side-nav fixed hide-on-med-and-down" style="transform: translateX(0%);margin-top:64px;">
-      <li>
-        <div class="userView">
-          <a href="#!user"><img class="circle" src="http://lorempixel.com/g/200/200/"></a>
-          <a href="#!name"><span>John Doe</span></a>
-          <a href="#"><span class="email">johndoe@johndoe.com</span></a>
-        </div>
-      </li>
-      <li><a class="waves-effect" href="#">Home</a></li>
-      <div class="divider"></div>
-      <li><a class="waves-effect" href="#">About</a></li>
-      <div class="divider"></div>
-      <li>
-        <a class="waves-effect" href="#">My Code</a>
-      </li>
-      <div class="divider"></div>
-    </ul>
+
     <div class="row sideNavPanel">
 
       <div class="col s4 m12">
@@ -96,6 +117,15 @@
   <footer>
 
   </footer>
+  <script src="../src/bharathacks/static/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../src/bharathacks/static/bower_components/materialize/dist/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.carousel').carousel();
+      $(".button-collapse").sideNav();
+
+    });
+  </script>
 </body>
 
 </html>
