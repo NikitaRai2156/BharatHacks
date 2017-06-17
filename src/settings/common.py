@@ -38,7 +38,9 @@ CORE_APPS = (
     'django.contrib.staticfiles',
 )
 
-THIRD_PARTY_APPS = ()
+THIRD_PARTY_APPS = (
+
+)
 
 PREFIX_THIRD_PARTY_APPS = (
     'admin_tools',
@@ -49,7 +51,9 @@ PREFIX_THIRD_PARTY_APPS = (
 
 OUR_APPS = (
     'bharathacks.base',
-    'bharathacks.events',
+    'Profile',
+
+
 )
 
 INSTALLED_APPS = PREFIX_THIRD_PARTY_APPS + CORE_APPS + OUR_APPS + THIRD_PARTY_APPS
