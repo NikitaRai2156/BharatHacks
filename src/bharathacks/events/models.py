@@ -18,7 +18,10 @@ class EventType(TimeAuditModel):
     subcategory = models.CharField(max_length=512)
 
     def __unicode__(self):
-        return '{} : {}'.format(self.name, self.subcategory)
+        return '{} : {}'.format(self.master_event.name, self.subcategory)
+
+    def __str__(self):
+        return '{} : {}'.format(self.master_event.name, self.subcategory)
 
     class Meta:
         db_table = 'event_type'
@@ -28,7 +31,7 @@ class Event(AuditModel):
 
     event_type = models.ForeignKey(EventType)
     name = models.CharField(max_length=512)
-    location = models.TextField(default='')
+
     scheduled_date = models.DateTimeField(null=True, blank=True)
     description = models.TextField(default='')
     contact_details = models.TextField(default='')
@@ -36,6 +39,9 @@ class Event(AuditModel):
     like_count = models.IntegerField(default=0)
 
     def __unicode__(self):
+        return '{} : {}'.format(self.name, self.event_type)
+
+    def __str__(self):
         return '{} : {}'.format(self.name, self.event_type)
 
     class Meta:

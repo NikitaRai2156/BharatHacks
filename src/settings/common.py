@@ -52,6 +52,7 @@ PREFIX_THIRD_PARTY_APPS = (
 OUR_APPS = (
     'bharathacks.base',
     'Profile',
+    'bharathacks.events'
 
 
 )
