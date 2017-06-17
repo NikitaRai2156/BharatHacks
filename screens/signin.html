@@ -63,7 +63,7 @@
               </div>
               <div>
                   <div class="row center center-align">
-                      <button onclick="validateSignin()" class="btn waves-effect waves-light z-depth-4" style="background-color:rgba(0,0,0,1);" type="submit" name="action">Sign in
+                      <button onclick="getLocation()" class="btn waves-effect waves-light z-depth-4" style="background-color:rgba(0,0,0,1);" type="submit" name="action">Sign in
                                 <i class="material-icons right">send</i>
                       </button>
                   </div>
@@ -84,6 +84,17 @@
       $(".button-collapse").sideNav();
 
     });
+    var x;
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            Materialize.toast('Error Sharing Location', 4000)
+        }
+    }
+    function showPosition(position) {
+        x = position.coords.latitude +","+position.coords.longitude;
+    }
   </script>
 </body>
 
