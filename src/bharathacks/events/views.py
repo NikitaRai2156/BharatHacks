@@ -7,6 +7,20 @@ from django.views.generic.detail import SingleObjectMixin, DetailView
 from .models import *
 
 
+class DistincEventView(SingleObjectMixin, ListView):
+
+    template_name = 'events/feed_home.html'
+    # @method_decorator(login_required)
+    # def dispatch(self, *args, **kwargs):
+        # return super(FeedView, self).dispatch(*args, **kwargs)
+
+    def get(self, request, *args, **kwargs):
+        event_master_list = MasterEventList.objects.all()
+        print event_master_list
+        return render(request, self.template_name, {
+            'event_types': event_master_list
+        })
+
 class FeedView(SingleObjectMixin, ListView):
 
     template_name = 'events/feed.html'

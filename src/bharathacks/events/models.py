@@ -3,8 +3,18 @@ from django.db import models
 from bharathacks.base.models import AuditModel, TimeAuditModel
 
 
+class MasterEventList(TimeAuditModel):
+    name = models.CharField(max_length=255, primary_key=True)
+
+    def __unicode__(self):
+        return '{}'.format(self.name)
+
+    class Meta:
+        db_table = 'event_master_list'
+
+
 class EventType(TimeAuditModel):
-    name = models.CharField(max_length=512)
+    master_event = models.ForeignKey(MasterEventList)
     subcategory = models.CharField(max_length=512)
 
     def __unicode__(self):
