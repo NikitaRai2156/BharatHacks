@@ -78,14 +78,14 @@
   <footer>
 
   </footer>
+  <script src="../src/bharathacks/static/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../src/bharathacks/static/bower_components/materialize/dist/js/materialize.min.js"></script>
   <script>
-      $(document).ready(function() {
-          $(".button-collapse").sideNav();
-      });
-      var error = "{{error}}";
-      if(error) {
-          Materialize.toast(error, 3000, 'rounded');
-      }
+    $(document).ready(function() {
+      $('.carousel').carousel();
+      $(".button-collapse").sideNav();
+
+    });
   </script>
 </body>
 
