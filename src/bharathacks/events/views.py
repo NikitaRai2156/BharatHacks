@@ -12,7 +12,7 @@ class FeedView(SingleObjectMixin, ListView):
     template_name = 'events/feed.html'
     # @method_decorator(login_required)
     # def dispatch(self, *args, **kwargs):
-        # return super(CmsMisView, self).dispatch(*args, **kwargs)
+        # return super(FeedView, self).dispatch(*args, **kwargs)
 
     def get(self, request, *args, **kwargs):
         events = Event.objects.all()
@@ -28,6 +28,6 @@ class EventDetailView(DetailView):
 
     # @method_decorator(login_required)
     # def dispatch(self, *args, **kwargs):
-        # return super(CmsObjectDetailView, self).dispatch(*args, **kwargs)
+        # return super(EventDetailView, self).dispatch(*args, **kwargs)
 
 
