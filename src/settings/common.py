@@ -53,6 +53,7 @@ OUR_APPS = (
     'bharathacks.base',
     'Profile',
 
+
 )
 
 INSTALLED_APPS = PREFIX_THIRD_PARTY_APPS + CORE_APPS + OUR_APPS + THIRD_PARTY_APPS

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}{{event.name}} | Event {% endblock %}
+{% block heading1_title %}{{event.name}}{% endblock %}
+
+{{% block container %}
+
+    {{ block.super }}
+    <div class="row spacer"></div>
+
+{% if event %}
+    {{event.id}}
+    {{event.name}}
+{% endif %}
+
+{% endblock %}
+

@@ -17,6 +17,8 @@ urlpatterns = [
     url(r'^logout/', logout_view, name='logout'),
 
 
+    url(r'^events/', include('bharathacks.events.urls', namespace='events')),
+
 ]
 
 
