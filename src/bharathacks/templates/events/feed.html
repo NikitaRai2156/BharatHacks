@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Feed{% endblock %}
+{% block heading1_title %}Feed{% endblock %}
+
+{{% block container %}
+
+    {{ block.super }}
+    <div class="row spacer"></div>
+
+{% if events %}
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>name</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for each in events %}
+        <tr>
+            <td class='bg-success'>{{each.id}}</td>
+            <td class='bg-success'>{{each.name}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+</div>
+
+{% endif %}
+
+{% endblock %}
+

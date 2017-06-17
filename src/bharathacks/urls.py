@@ -10,4 +10,6 @@ urlpatterns = [
 
     url(r'^admin_tools/', include('admin_tools.urls')),
 
+    url(r'^events/', include('bharathacks.events.urls', namespace='events')),
+
 ]

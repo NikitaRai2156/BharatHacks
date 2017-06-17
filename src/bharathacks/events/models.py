@@ -7,6 +7,9 @@ class EventType(TimeAuditModel):
     name = models.CharField(max_length=512)
     subcategory = models.CharField(max_length=512)
 
+    def __unicode__(self):
+        return '{} : {}'.format(self.name, self.subcategory)
+
     class Meta:
         db_table = 'event_type'
 
@@ -21,6 +24,9 @@ class Event(AuditModel):
     contact_details = models.TextField(default='')
     capacity_count = models.IntegerField(default=0)
     like_count = models.IntegerField(default=0)
+
+    def __unicode__(self):
+        return '{} : {}'.format(self.name, self.event_type)
 
     class Meta:
         db_table = 'events'
