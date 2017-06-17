@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Home | The Housewife</title>
+  <meta charset="utf-8" />
+  <meta name="theme-color" content="#039be5" />
+  <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+  <meta name="author" content="team-codedevs" />
+  <script src="https://use.fontawesome.com/81b71ab598.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../src/bharathacks/static/bower_components/materialize/dist/css/materialize.min.css">
+  <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="navbar-fixed">
+      <nav class="navBlue">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo center thin">Home-Makers</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down" style="display:flex;flex-wrap:wrap">
+            <li class=""><a href="#">Username</a></li>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+  </header>
+  <main class="signinPage">
+      <section>
+          <div class="card signinForm z-depth-5" style="border-radius:4%;">
+              <div class="card-content">
+                <div class="row">
+                  <h3 class="card-title center" style="margin:0;">Login</h3>
+                </div>
+
+                  <form method="post" >
+
+                      <div class="row">
+                          <div class="input-field col s12">
+                              <input id="username" type="text" class="validate " name="username">
+                              <label for="username">Username</label>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="input-field col s12">
+                              <input id="password" type="password" class="validate " name="password">
+                              <label for="password">Password</label>
+                          </div>
+
+                      </div>
+
+                      <div class="row container">
+                        <span>Don't Have an account?<a href="/signup">Sign up</a></span>
+                      </div>
+
+                  </form>
+              </div>
+              <div>
+                  <div class="row center center-align">
+                      <button onclick="validateSignin()" class="btn waves-effect waves-light z-depth-4" style="background-color:rgba(0,0,0,1);" type="submit" name="action">Sign in
+                                <i class="material-icons right">send</i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+
+      </section>
+
+  </main>
+  <footer>
+
+  </footer>
+  <script>
+      $(document).ready(function() {
+          $(".button-collapse").sideNav();
+      });
+      var error = "{{error}}";
+      if(error) {
+          Materialize.toast(error, 3000, 'rounded');
+      }
+  </script>
+</body>
+
+</html>
