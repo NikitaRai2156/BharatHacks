@@ -24,18 +24,34 @@
       <nav class="navBlue">
         <div class="nav-wrapper">
           <a href="#" class="brand-logo center thin">Home-Makers</a>
+
           <ul id="nav-mobile" class="right hide-on-med-and-down" style="display:flex;flex-wrap:wrap">
             <li class=""><a href="#">Username</a></li>
-
           </ul>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
         </div>
       </nav>
     </div>
 
-  </header>
-  <main class="row">
 
-    <!-- Side Nav Panel -->
+    <ul id="mobile-demo" class="side-nav">
+      <li>
+        <div class="userView">
+          <a href="#!user"><img class="circle" src="http://lorempixel.com/g/200/200/"></a>
+          <a href="#!name"><span>John Doe</span></a>
+          <a href="#"><span class="email">johndoe@johndoe.com</span></a>
+        </div>
+      </li>
+      <li><a class="waves-effect" href="#">Home</a></li>
+      <div class="divider"></div>
+      <li><a class="waves-effect" href="#">About</a></li>
+      <div class="divider"></div>
+      <li>
+        <a class="waves-effect" href="#">My Code</a>
+      </li>
+      <div class="divider"></div>
+    </ul>
 
 
     <ul id="slide-out" class="side-nav fixed hide-on-med-and-down" style="transform: translateX(0%);margin-top:64px;">
@@ -55,6 +71,14 @@
       </li>
       <div class="divider"></div>
     </ul>
+
+  </header>
+  <main class="row">
+
+    <!-- Side Nav Panel -->
+
+
+
     <!-- End Side Nav -->
 
     <!-- Category Row -->
@@ -160,6 +184,8 @@
   <script>
     $(document).ready(function() {
       $('.carousel').carousel();
+      $(".button-collapse").sideNav();
+
     });
   </script>
 </body>
