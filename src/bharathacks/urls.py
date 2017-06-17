@@ -7,6 +7,8 @@ from Profile.views import (
 		logout_view
 		)
 
+from bharathacks.events.views import EventListView
+
 urlpatterns = [
 
     url(r'^$', TemplateView.as_view(template_name='base.html')),
@@ -15,9 +17,10 @@ urlpatterns = [
     url(r'^register/', register_view, name='register'),
     url(r'^login/', login_view, name='login'),
     url(r'^logout/', logout_view, name='logout'),
+    url(r'^events/', EventListView, name='events'),
+    
 
 
-    url(r'^events/', include('bharathacks.events.urls', namespace='events')),
 
 ]
 
