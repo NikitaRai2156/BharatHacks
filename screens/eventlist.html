@@ -24,66 +24,73 @@
       <nav class="navBlue">
         <div class="nav-wrapper">
           <a href="#" class="brand-logo center thin">Home-Makers</a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
           <ul id="nav-mobile" class="right hide-on-med-and-down" style="display:flex;flex-wrap:wrap">
             <li class=""><a href="#">Username</a></li>
-
           </ul>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
         </div>
       </nav>
     </div>
-    <ul id="nav-mobile" class="side-nav">
-      <ul id="slide-out" class="side-nav fixed hide-on-med-and-down" style="transform: translateX(0%);margin-top:64px;">
-        <li>
-          <div class="userView">
-            <a href="#!user"><img class="circle" src="http://lorempixel.com/g/200/200/"></a>
-            <a href="#!name"><span>John Doe</span></a>
-            <a href="#"><span class="email">johndoe@johndoe.com</span></a>
-          </div>
-        </li>
-        <li><a class="waves-effect" href="#">Home</a></li>
-        <div class="divider"></div>
-        <li><a class="waves-effect" href="#">About</a></li>
-        <div class="divider"></div>
-        <li>
-          <a class="waves-effect" href="#">My Code</a>
-        </li>
-        <div class="divider"></div>
-      </ul>
 
-<ul id="mobile-demo" class="side-nav">
-  <li>
-    <div class="userView">
-      <a href="#!user"><img class="circle" src="http://lorempixel.com/g/200/200/"></a>
-      <a href="#!name"><span>John Doe</span></a>
-      <a href="#"><span class="email">johndoe@johndoe.com</span></a>
-    </div>
-  </li>
-  <li><a class="waves-effect" href="#">Home</a></li>
-  <div class="divider"></div>
-  <li><a class="waves-effect" href="#">About</a></li>
-  <div class="divider"></div>
-  <li>
-    <a class="waves-effect" href="#">My Code</a>
-  </li>
-  <div class="divider"></div>
-</ul>
+
+    <ul id="mobile-demo" class="side-nav">
+      <li>
+        <div class="userView">
+          <a href="#!user"><img class="circle" src="http://lorempixel.com/g/200/200/"></a>
+          <a href="#!name"><span>John Doe</span></a>
+          <a href="#"><span class="email">johndoe@johndoe.com</span></a>
+        </div>
+      </li>
+      <li><a class="waves-effect" href="#">Home</a></li>
+      <div class="divider"></div>
+      <li><a class="waves-effect" href="#">About</a></li>
+      <div class="divider"></div>
+      <li>
+        <a class="waves-effect" href="#">My Code</a>
+      </li>
+      <div class="divider"></div>
+    </ul>
+
+
+    <ul id="slide-out" class="side-nav fixed hide-on-med-and-down" style="transform: translateX(0%);margin-top:64px;">
+      <li>
+        <div class="userView">
+          <a href="#!user"><img class="circle" src="http://lorempixel.com/g/200/200/"></a>
+          <a href="#!name"><span>John Doe</span></a>
+          <a href="#"><span class="email">johndoe@johndoe.com</span></a>
+        </div>
+      </li>
+      <li><a class="waves-effect" href="#">Home</a></li>
+      <div class="divider"></div>
+      <li><a class="waves-effect" href="#">About</a></li>
+      <div class="divider"></div>
+      <li>
+        <a class="waves-effect" href="#">My Code</a>
+      </li>
+      <div class="divider"></div>
+    </ul>
+
   </header>
   <main class="row">
 
     <div class="row sideNavPanel">
 
-      <div class="col s4 m12">
+      <div class="col s12 m6">
         <div class="card ">
-
-
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">Event Name<i class="material-icons right">more_vert</i></span>
             <p>Created By: <a href="#">Username</a></p>
             <p>Location :</p>
-            <p><a href="#">This is a link</a></p>
-            <i class="material-icons">thumb_up</i><i class="material-icons">done</i>
+            <div class="switch">
+              <label>
+                Not Interested
+                <input type="checkbox" name="interested">
+                <span class="lever"></span>
+                Interested
+              </label>
+            </div>
           </div>
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4">Event Name<i class="material-icons right">close</i></span>
@@ -92,16 +99,64 @@
         </div>
       </div>
 
-      <div class="col s4 m12">
+      <div class="col s12 m6">
         <div class="card ">
-
-
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">Event Name<i class="material-icons right">more_vert</i></span>
             <p>Created By: <a href="#">Username</a></p>
             <p>Location :</p>
-            <p><a href="#">This is a link</a></p>
-            <i class="material-icons">thumb_up</i><i class="material-icons">done</i>
+            <div class="switch">
+              <label>
+                Not Interested
+                <input type="checkbox" name="interested">
+                <span class="lever"></span>
+                Interested
+              </label>
+            </div>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Event Name<i class="material-icons right">close</i></span>
+            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m6">
+        <div class="card ">
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Event Name<i class="material-icons right">more_vert</i></span>
+            <p>Created By: <a href="#">Username</a></p>
+            <p>Location :</p>
+            <div class="switch">
+              <label>
+                Not Interested
+                <input type="checkbox" name="interested">
+                <span class="lever"></span>
+                Interested
+              </label>
+            </div>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Event Name<i class="material-icons right">close</i></span>
+            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m6">
+        <div class="card ">
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Event Name<i class="material-icons right">more_vert</i></span>
+            <p>Created By: <a href="#">Username</a></p>
+            <p>Location :</p>
+            <div class="switch">
+              <label>
+                Not Interested
+                <input type="checkbox" name="interested">
+                <span class="lever"></span>
+                Interested
+              </label>
+            </div>
           </div>
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4">Event Name<i class="material-icons right">close</i></span>
